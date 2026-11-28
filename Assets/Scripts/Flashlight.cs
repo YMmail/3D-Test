@@ -47,7 +47,10 @@ public class Flashlight : MonoBehaviour
     }
 
     // --- 6. เช็คว่าจุดนี้โดนไฟฉายส่องอยู่ไหม (ปลาใช้) ---
-    public bool IsLighting(Vector3 point)
+    public bool IsLighting(Vector3 point) { return IsLighting(point, hitConeScale); }
+
+    // coneScale = ใช้กรวยแสงกี่ส่วน (1 = เต็มกรวยที่เห็นจริง — ของลับใช้ค่านี้)
+    public bool IsLighting(Vector3 point, float coneScale)
     {
         if (!IsOn) return false;
         Transform t = spotLight.transform;
@@ -55,7 +58,7 @@ public class Flashlight : MonoBehaviour
         float dist = toPoint.magnitude;
         if (dist > spotLight.range) return false;                                    // ไกลเกิน
         float angle = Vector3.Angle(t.forward, toPoint);
-        if (angle > spotLight.spotAngle * 0.5f * hitConeScale) return false;         // นอกกรวยแสง
+        if (angle > spotLight.spotAngle * 0.5f * coneScale) return false;         // นอกกรวยแสง
         // มีอะไรบังไหม (ไม่นับ Trigger)
         if (Physics.Raycast(t.position, toPoint.normalized, out RaycastHit hit, dist - 0.1f, blockMask, QueryTriggerInteraction.Ignore))
         {

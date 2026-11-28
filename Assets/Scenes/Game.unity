@@ -11436,7 +11436,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LightReveal
   holdTime: 1
-  stayVisibleAfterReveal: 1
+  stayVisibleAfterReveal: 0
   unlockLoop: {fileID: 0}
   renderers: []
 --- !u!1 &625931761
@@ -33509,7 +33509,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LightReveal
   holdTime: 1
-  stayVisibleAfterReveal: 1
+  stayVisibleAfterReveal: 0
   unlockLoop: {fileID: 0}
   renderers: []
 --- !u!1 &2017078562
@@ -33559,7 +33559,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LightReveal
   holdTime: 1
-  stayVisibleAfterReveal: 1
+  stayVisibleAfterReveal: 0
   unlockLoop: {fileID: 0}
   renderers: []
 --- !u!1 &2028611331
