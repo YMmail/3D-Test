@@ -13,6 +13,7 @@ public class Flashlight : MonoBehaviour
     [Tooltip("ปุ่มเปิด/ปิด")] public KeyCode toggleKey = KeyCode.F;
     [Tooltip("เริ่มเกมมามีไฟฉายเลยไหม (โซน 1 ต้องเก็บก่อน = false)")] public bool hasFlashlight = false;
     [Tooltip("เก็บแล้วเปิดไฟให้อัตโนมัติไหม")] public bool turnOnWhenPicked = true;
+    [Tooltip("💡 โมเดลไฟฉายในมือ (โชว์เมื่อเก็บไฟฉายแล้ว)")] public GameObject heldModel;
 
     [Header("ให้ปลาเช็ค")]
     [Tooltip("💡 ปลาโดนแสงถ้าอยู่ในกรวยแสงที่แคบกว่าแสงจริงนิดนึง (0.8 = 80% ของมุม)")] public float hitConeScale = 0.8f;
@@ -33,6 +34,7 @@ public class Flashlight : MonoBehaviour
     // --- 4. กด F ---
     void Update()
     {
+        if (heldModel != null && heldModel.activeSelf != hasFlashlight) heldModel.SetActive(hasFlashlight);
         if (!hasFlashlight || spotLight == null) return;
         if (Input.GetKeyDown(toggleKey)) spotLight.enabled = !spotLight.enabled;
     }

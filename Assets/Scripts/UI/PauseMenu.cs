@@ -61,7 +61,7 @@ public class PauseMenu : MonoBehaviour
     {
         if (IsPaused || resuming) return;
         if (PlayerRespawn.Instance != null && PlayerRespawn.Instance.IsDead) return; // กำลังตายอยู่ ไม่ให้หยุด
-        if (CodePanel.BlocksPause || EndingTrigger.Playing) return; // เปิดแผงรหัสอยู่ / กำลังจบเกม
+        if (CodePanel.BlocksPause || EndingTrigger.Playing || OpeningFall.Playing) return; // เปิดแผงรหัสอยู่ / กำลังจบเกม
         IsPaused = true;
         Time.timeScale = 0f; AudioListener.pause = true;
         // ปิดปุ่มของเกม ไม่ให้กด Space/F/E ระหว่างหยุดแล้วมีผล
