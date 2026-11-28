@@ -13,6 +13,7 @@ public class EndingTrigger : MonoBehaviour
     [Tooltip("ข้อความตอนจบ (ใช้ตอนไม่มีรูป)")] public string endText = "จบ";
     [Tooltip("💡 รูปฉากจบ เช่น THE TRUTH SURFACES (เว้นว่าง = ใช้ข้อความ)")] public Sprite endImage;
     [Tooltip("💡 รูปเครดิตทีม ขึ้นต่อจากรูปฉากจบ (เว้นว่าง = ข้าม)")] public Sprite creditsImage;
+    [Tooltip("ใช้ในฉาก Ending: เล่นฉากจบทันทีตอนเริ่มฉาก (ฉาก Game ใช้ HitAndLoadScene ของอาจารย์พามา)")] public bool playOnStart;
     public float fadeTime = 2f;
     [Tooltip("ค้างข้อความ/รูปฉากจบกี่วินาที")] public float holdTime = 4f;
     [Tooltip("ค้างรูปเครดิตกี่วินาที")] public float creditsHoldTime = 6f;
@@ -24,9 +25,16 @@ public class EndingTrigger : MonoBehaviour
     [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.SubsystemRegistration)]
     static void ResetOnPlay() { Playing = false; }
 
+    void Start()
+    {
+        if (!playOnStart) return;
+        Playing = true;
+        StartCoroutine(EndRoutine());
+    }
+
     void OnTriggerEnter(Collider other)
     {
-        if (Playing) return;
+        if (Playing || playOnStart) return;
         var player = other.GetComponentInParent<PlayerController25D>();
         if (player == null) return;
         if (PlayerRespawn.Instance != null && PlayerRespawn.Instance.IsDead) return;
@@ -38,8 +46,8 @@ public class EndingTrigger : MonoBehaviour
     IEnumerator EndRoutine()
     {
         var root = UIKit.CreateCanvas("EndingCanvas", 200).transform;
-        var black = UIKit.Panel(root, new Color(0, 0, 0, 0));
-        for (float t = 0f; t < fadeTime; t += Time.deltaTime) { black.color = new Color(0, 0, 0, t / fadeTime); yield return null; }
+        var black = UIKit.Panel(root, new Color(0, 0, 0, playOnStart ? 1 : 0));
+        if (!playOnStart) for (float t = 0f; t < fadeTime; t += Time.deltaTime) { black.color = new Color(0, 0, 0, t / fadeTime); yield return null; }
         black.color = Color.black;
 
         // 1. รูปฉากจบ (ไม่มีรูป = ข้อความแบบเดิม)
