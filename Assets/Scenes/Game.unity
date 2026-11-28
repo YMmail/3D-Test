@@ -5483,7 +5483,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 30e4e1107be36304f9f75143502331b6, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 701ce9fbd9754e543adf9b0d351f7ab5, type: 2}
+      objectReference: {fileID: 2100000, guid: 1522fd6f976e2f54dba60d786aedfcee, type: 2}
     - target: {fileID: 919132149155446097, guid: 30e4e1107be36304f9f75143502331b6, type: 3}
       propertyPath: m_Name
       value: Model
@@ -7267,7 +7267,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 30e4e1107be36304f9f75143502331b6, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 701ce9fbd9754e543adf9b0d351f7ab5, type: 2}
+      objectReference: {fileID: 2100000, guid: 1522fd6f976e2f54dba60d786aedfcee, type: 2}
     - target: {fileID: 919132149155446097, guid: 30e4e1107be36304f9f75143502331b6, type: 3}
       propertyPath: m_Name
       value: Model
@@ -11437,6 +11437,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::LightReveal
   holdTime: 1
   stayVisibleAfterReveal: 0
+  fadeSpeed: 4
   unlockLoop: {fileID: 0}
   renderers: []
 --- !u!1 &625931761
@@ -13021,7 +13022,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 30e4e1107be36304f9f75143502331b6, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 701ce9fbd9754e543adf9b0d351f7ab5, type: 2}
+      objectReference: {fileID: 2100000, guid: 1522fd6f976e2f54dba60d786aedfcee, type: 2}
     - target: {fileID: 919132149155446097, guid: 30e4e1107be36304f9f75143502331b6, type: 3}
       propertyPath: m_Name
       value: Model
@@ -33510,6 +33511,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::LightReveal
   holdTime: 1
   stayVisibleAfterReveal: 0
+  fadeSpeed: 4
   unlockLoop: {fileID: 0}
   renderers: []
 --- !u!1 &2017078562
@@ -33560,6 +33562,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::LightReveal
   holdTime: 1
   stayVisibleAfterReveal: 0
+  fadeSpeed: 4
   unlockLoop: {fileID: 0}
   renderers: []
 --- !u!1 &2028611331
