@@ -1,0 +1,5 @@
+SFX สำหรับเกม HIDDEN
+- footsteps (walk_/run_), click_object_*, click_metal, flashlight_on/off
+  มาจากแพ็กเสียงของ Kenney (www.kenney.nl) — ไลเซนส์ CC0 ใช้ได้ฟรี ไม่ต้องให้เครดิต (ให้ก็ดี)
+  ไฟล์ walk/run เอาเสียงก้าวเท้าเดี่ยวๆ ของ Kenney มาเรียงเป็นจังหวะเดิน/วิ่ง
+- crate_drag_*, water_flow_loop  สังเคราะห์ขึ้นใหม่ด้วยโค้ด ใช้ได้อิสระ

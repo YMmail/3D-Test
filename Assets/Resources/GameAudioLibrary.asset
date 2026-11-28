@@ -1,0 +1,88 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a22fb379552300a4f87dc1d999be9363, type: 3}
+  m_Name: GameAudioLibrary
+  m_EditorClassIdentifier: Assembly-CSharp::GameAudioLibrary
+  ambience:
+    clips:
+    - {fileID: 8300000, guid: ecc8e668bdf9a214f963925b6c005d72, type: 3}
+    volume: 0.5
+  cratePush:
+    clips:
+    - {fileID: 8300000, guid: 0b94e7d18734b664b9d4076b2a4466ba, type: 3}
+    volume: 0.7
+  footstep:
+    clips:
+    - {fileID: 8300000, guid: 739349026a4df424992a61dbd292e269, type: 3}
+    - {fileID: 8300000, guid: 104bed5ca40e4764db480ff7537a1653, type: 3}
+    - {fileID: 8300000, guid: e3e7f71d274c5594fa1d1c03c36ceced, type: 3}
+    - {fileID: 8300000, guid: 5c8db211d20858842ae89ab0344a9e0d, type: 3}
+    volume: 0.6
+  footstepWood:
+    clips:
+    - {fileID: 8300000, guid: 6742889f04091c84ba17c1aa02973c2b, type: 3}
+    - {fileID: 8300000, guid: 5511b706f49324e4ea26affeae1edc0b, type: 3}
+    - {fileID: 8300000, guid: de605cb9bba27e541b01df2c3b9963cf, type: 3}
+    - {fileID: 8300000, guid: eea6f12373231dc47aba296ce5817804, type: 3}
+    volume: 0.6
+  jump:
+    clips:
+    - {fileID: 8300000, guid: 8aa13a0fb7ca9ca4e88da4bb9e29e05e, type: 3}
+    volume: 0.5
+  land:
+    clips:
+    - {fileID: 8300000, guid: d411d2c53772f2d478152b427b9c3e23, type: 3}
+    volume: 0.6
+  flashlight:
+    clips:
+    - {fileID: 8300000, guid: 343dd75aba2da2945818020ef6557b39, type: 3}
+    volume: 0.8
+  flashlightOff:
+    clips:
+    - {fileID: 8300000, guid: b20c23c897150184a8d60b46777469de, type: 3}
+    volume: 0.8
+  pickup:
+    clips:
+    - {fileID: 8300000, guid: e510faa16e3023b48a01636357226b39, type: 3}
+    volume: 0.8
+  death:
+    clips:
+    - {fileID: 8300000, guid: 7ceece15141adfe4a93aeab3f8ada99e, type: 3}
+    volume: 0.9
+  fishWarn:
+    clips:
+    - {fileID: 8300000, guid: f7dafc4fea6dcae4bba5772559db15bc, type: 3}
+    volume: 0.9
+  fishLunge:
+    clips:
+    - {fileID: 8300000, guid: a70a17dab1b8ce240b6b1bc6a2b43926, type: 3}
+    volume: 1
+  keyPress:
+    clips:
+    - {fileID: 8300000, guid: 2e081d8b152e4d44bab2297e292b7820, type: 3}
+    volume: 0.7
+  codeWrong:
+    clips:
+    - {fileID: 8300000, guid: 50dc6a11e5af27b49b047460e4ab0228, type: 3}
+    volume: 0.7
+  codeRight:
+    clips:
+    - {fileID: 8300000, guid: dc29192d49563f245921222da1753a30, type: 3}
+    volume: 0.8
+  gateOpen:
+    clips:
+    - {fileID: 8300000, guid: 645ba3dbad4d70248868ab12b3232ddc, type: 3}
+    volume: 0.8
+  uiClick:
+    clips:
+    - {fileID: 8300000, guid: d0687dd977d06bb4ebea4bc182a693ca, type: 3}
+    volume: 0.7
