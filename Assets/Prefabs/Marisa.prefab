@@ -861,11 +861,11 @@ PrefabInstance:
     - target: {fileID: -6067185528594298527, guid: 33fedfd3e62ce4048b9e10391d9e6fa2, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 45236fc679975ab4c8a4d3a31fdda5bc, type: 2}
+      objectReference: {fileID: 2100000, guid: e02662a11e15d6046b2af842080b0790, type: 2}
     - target: {fileID: -3901992563441801604, guid: 33fedfd3e62ce4048b9e10391d9e6fa2, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 45236fc679975ab4c8a4d3a31fdda5bc, type: 2}
+      objectReference: {fileID: 2100000, guid: 5f753c6286307a949bb417cc13ba553b, type: 2}
     - target: {fileID: 919132149155446097, guid: 33fedfd3e62ce4048b9e10391d9e6fa2, type: 3}
       propertyPath: m_Name
       value: Heroine_FBX
@@ -873,7 +873,7 @@ PrefabInstance:
     - target: {fileID: 5901893356585517859, guid: 33fedfd3e62ce4048b9e10391d9e6fa2, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 45236fc679975ab4c8a4d3a31fdda5bc, type: 2}
+      objectReference: {fileID: 2100000, guid: 80227c7fff286674b8c656b08e8fbe9c, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
