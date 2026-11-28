@@ -15,7 +15,7 @@ MonoBehaviour:
   ambience:
     clips:
     - {fileID: 8300000, guid: ecc8e668bdf9a214f963925b6c005d72, type: 3}
-    volume: 0.5
+    volume: 0.18
   cratePush:
     clips:
     - {fileID: 8300000, guid: 0b94e7d18734b664b9d4076b2a4466ba, type: 3}
