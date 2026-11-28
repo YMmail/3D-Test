@@ -43,12 +43,14 @@ public class OpeningFall : MonoBehaviour
         player.canMove = false;
         Vector3 p = player.transform.position; p.y = startHeight;
         player.transform.position = p;
-        body.position = p; body.linearVelocity = Vector3.zero; body.isKinematic = true;
+        body.position = p; body.linearVelocity = Vector3.zero;
+        var oldConstraints = body.constraints;
+        body.constraints = RigidbodyConstraints.FreezeAll; // ค้างไว้กลางอากาศ
         var cam = Camera.main != null ? Camera.main.GetComponent<CameraFollow25D>() : null;
         yield return new WaitForSeconds(blackHold);
 
         // 2.2 ปล่อยให้ร่วง + จอค่อยๆ สว่าง
-        body.isKinematic = false;
+        body.constraints = oldConstraints;
         float t0 = Time.time;
         bool landed = false;
         float fadeT = 0f;

@@ -19,6 +19,7 @@ public class GameAudio : MonoBehaviour
     public string LastPlayed { get; private set; } = ""; // ไว้ดูตอนทดสอบ
 
     AudioSource sfx, ui, ambience, push;
+    AudioSource musicA, musicB, musicNow, stinger; // ดนตรี: สลับ 2 ตัวไว้เฟดข้ามกัน
 
     // --- 2. ของที่คอยดู ---
     PlayerController25D player;
@@ -47,6 +48,7 @@ public class GameAudio : MonoBehaviour
         Instance = this; Library = lib;
         sfx = NewSource(false); ui = NewSource(false); ambience = NewSource(true); push = NewSource(true);
         ui.ignoreListenerPause = true; // เสียงปุ่มดังได้ตอนหยุดเกม
+        musicA = NewSource(true); musicB = NewSource(true); stinger = NewSource(false); musicNow = musicA;
         StartLoop(ambience, lib.ambience, 1f);
         StartLoop(push, lib.cratePush, 0f);
         SceneManager.sceneLoaded += OnSceneLoaded;
@@ -116,6 +118,7 @@ public class GameAudio : MonoBehaviour
     // --- 5. ทุกเฟรม: ดูว่าอะไรเปลี่ยน ---
     void Update()
     {
+        UpdateMusic();
         if (player == null || Time.timeScale == 0f) return;
         bool dead = PlayerRespawn.Instance != null && PlayerRespawn.Instance.IsDead;
         bool grounded = player.IsGrounded;
@@ -131,7 +134,7 @@ public class GameAudio : MonoBehaviour
         }
 
         // 5.1 ตาย
-        if (dead && !wasDead && !PlayerRespawn.Instance.IsSilentReturn) Play(l => l.death);
+        if (dead && !wasDead && !PlayerRespawn.Instance.IsSilentReturn) { Play(l => l.death); PlayOn(stinger, Library.musicDeath, 1f); }
 
         // 5.2 ก้าวเท้า / กระโดด / ลงพื้น
         Vector3 move = pos - lastPos; float up = move.y; move.y = 0f;
@@ -171,5 +174,41 @@ public class GameAudio : MonoBehaviour
         push.volume = Mathf.MoveTowards(push.volume, pushing && !dead ? Library.cratePush.volume : 0f, Time.deltaTime * 4f);
 
         wasDead = dead; wasGrounded = grounded; wasOn = on; hadFlashlight = has; lastPos = pos;
+    }
+
+    // --- 6. ดนตรี: เลือกเพลงตามฉาก/โซน แล้วค่อยๆ เฟดเปลี่ยน ---
+    void UpdateMusic()
+    {
+        string scene = SceneManager.GetActiveScene().name;
+        bool inGame = player != null;
+        GameAudioLibrary.Sound want = null;
+        bool loop = true;
+        if (scene == PauseMenu.MenuScene) want = Library.musicMenu;
+        else if (scene == "Ending") { want = Library.musicEnding; loop = false; }
+        else if (inGame)
+        {
+            bool dead = PlayerRespawn.Instance != null && PlayerRespawn.Instance.IsDead && !PlayerRespawn.Instance.IsSilentReturn;
+            float x = player.transform.position.x;
+            if (!dead) want = x >= Library.zone2MinX && x < Library.zone2MaxX ? Library.musicZone2 : Library.musicZone1_3;
+        }
+        AudioClip clip = want != null && Has(want) ? want.clips[0] : null;
+        float target = want != null ? want.volume : 0f;
+
+        // เปลี่ยนเพลง: ตัวใหม่เริ่มเบาๆ ตัวเก่าค่อยๆ หาย
+        if (clip != musicNow.clip)
+        {
+            var other = musicNow == musicA ? musicB : musicA;
+            other.Stop(); other.clip = clip; other.loop = loop; other.volume = 0f;
+            if (clip != null) other.Play();
+            musicNow = other;
+        }
+        float rate = Time.unscaledDeltaTime / Mathf.Max(0.05f, Library.musicFade);
+        musicNow.volume = Mathf.MoveTowards(musicNow.volume, target, rate);
+        var old = musicNow == musicA ? musicB : musicA;
+        old.volume = Mathf.MoveTowards(old.volume, 0f, rate);
+        if (old.isPlaying && old.volume <= 0f) old.Stop();
+
+        // เสียงน้ำวน: ดังเฉพาะในเกม
+        if (Has(Library.ambience)) ambience.volume = Mathf.MoveTowards(ambience.volume, inGame ? Library.ambience.volume : 0f, rate);
     }
 }

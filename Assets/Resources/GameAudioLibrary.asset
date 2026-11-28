@@ -86,3 +86,26 @@ MonoBehaviour:
     clips:
     - {fileID: 8300000, guid: d0687dd977d06bb4ebea4bc182a693ca, type: 3}
     volume: 0.7
+  musicMenu:
+    clips:
+    - {fileID: 8300000, guid: 1a919e2a3144086439a63a816c4da2f7, type: 3}
+    volume: 0.6
+  musicZone1_3:
+    clips:
+    - {fileID: 8300000, guid: 247ed09ab1e98e84e80a4027338baf62, type: 3}
+    volume: 0.45
+  musicZone2:
+    clips:
+    - {fileID: 8300000, guid: 90bb0781530783d41ba586dab615661b, type: 3}
+    volume: 0.5
+  musicDeath:
+    clips:
+    - {fileID: 8300000, guid: d87c352d20c0d584ab3fb8486eb849a4, type: 3}
+    volume: 0.8
+  musicEnding:
+    clips:
+    - {fileID: 8300000, guid: 05854d4f07545f141aa7c903134517d4, type: 3}
+    volume: 0.6
+  zone2MinX: 21.5
+  zone2MaxX: 66.5
+  musicFade: 1.5

@@ -40,4 +40,13 @@ public class GameAudioLibrary : ScriptableObject
 
     [Header("เมนู")]
     public Sound uiClick = new Sound();
+
+    [Header("ดนตรี (เปลี่ยนเองตามฉาก/โซน ค่อยๆ เฟด)")]
+    [Tooltip("หน้าเมนู")] public Sound musicMenu = new Sound();
+    [Tooltip("พื้นหลังโซน 1 และ 3")] public Sound musicZone1_3 = new Sound();
+    [Tooltip("โซน 2 หนีปลา")] public Sound musicZone2 = new Sound();
+    [Tooltip("ตอนตาย (เล่นครั้งเดียว)")] public Sound musicDeath = new Sound();
+    [Tooltip("ฉากจบ")] public Sound musicEnding = new Sound();
+    [Tooltip("โซน 2 เริ่ม/จบที่ X เท่าไหร่")] public float zone2MinX = 21.5f, zone2MaxX = 66.5f;
+    [Tooltip("เปลี่ยนเพลงเฟดกี่วินาที")] public float musicFade = 1.5f;
 }
