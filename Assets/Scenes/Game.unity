@@ -789,6 +789,7 @@ GameObject:
   - component: {fileID: 40418540}
   - component: {fileID: 40418539}
   - component: {fileID: 40418538}
+  - component: {fileID: 40418542}
   m_Layer: 0
   m_Name: Sign_Grab_E
   m_TagString: Untagged
@@ -1106,6 +1107,22 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &40418542
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 40418536}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 20b0fd3c8f8c9e0498f228c981494658, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SignText
+  text: "\u0E40\u0E14\u0E34\u0E19\u0E0A\u0E19\u0E25\u0E31\u0E07 = \u0E14\u0E31\u0E19\n(\u0E14\u0E36\u0E07\u0E01\u0E25\u0E31\u0E1A\u0E44\u0E21\u0E48\u0E44\u0E14\u0E49)"
+  fontSize: 150
+  color: {r: 0.95, g: 0.92, b: 0.8, a: 1}
+  offset: 0.03
 --- !u!1 &43937367
 GameObject:
   m_ObjectHideFlags: 0
@@ -2619,6 +2636,7 @@ GameObject:
   - component: {fileID: 105264973}
   - component: {fileID: 105264972}
   - component: {fileID: 105264971}
+  - component: {fileID: 105264975}
   m_Layer: 0
   m_Name: Sign_Move_AD_WS
   m_TagString: Untagged
@@ -2936,6 +2954,22 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &105264975
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 105264969}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 20b0fd3c8f8c9e0498f228c981494658, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SignText
+  text: "A / D  \u0E40\u0E14\u0E34\u0E19\nW / S  \u0E40\u0E02\u0E49\u0E32-\u0E2D\u0E2D\u0E01"
+  fontSize: 150
+  color: {r: 0.95, g: 0.92, b: 0.8, a: 1}
+  offset: 0.03
 --- !u!1 &113374587
 GameObject:
   m_ObjectHideFlags: 0
@@ -10081,6 +10115,7 @@ GameObject:
   - component: {fileID: 573236598}
   - component: {fileID: 573236597}
   - component: {fileID: 573236596}
+  - component: {fileID: 573236600}
   m_Layer: 0
   m_Name: Sign_Flashlight_F
   m_TagString: Untagged
@@ -10398,6 +10433,22 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &573236600
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 573236594}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 20b0fd3c8f8c9e0498f228c981494658, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SignText
+  text: "E  \u0E40\u0E01\u0E47\u0E1A\u0E44\u0E1F\u0E09\u0E32\u0E22\nF  \u0E40\u0E1B\u0E34\u0E14 / \u0E1B\u0E34\u0E14\u0E44\u0E1F"
+  fontSize: 150
+  color: {r: 0.95, g: 0.92, b: 0.8, a: 1}
+  offset: 0.03
 --- !u!1 &583731673
 GameObject:
   m_ObjectHideFlags: 0
@@ -16859,6 +16910,7 @@ GameObject:
   - component: {fileID: 1125379500}
   - component: {fileID: 1125379499}
   - component: {fileID: 1125379498}
+  - component: {fileID: 1125379502}
   m_Layer: 0
   m_Name: Sign_Climb
   m_TagString: Untagged
@@ -17176,6 +17228,22 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &1125379502
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1125379496}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 20b0fd3c8f8c9e0498f228c981494658, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SignText
+  text: "\u0E14\u0E31\u0E19\u0E25\u0E31\u0E07\u0E44\u0E1B\u0E0A\u0E34\u0E14\u0E02\u0E31\u0E49\u0E19\n\u0E41\u0E25\u0E49\u0E27\u0E01\u0E23\u0E30\u0E42\u0E14\u0E14\u0E02\u0E36\u0E49\u0E19"
+  fontSize: 150
+  color: {r: 0.95, g: 0.92, b: 0.8, a: 1}
+  offset: 0.03
 --- !u!1 &1128622906
 GameObject:
   m_ObjectHideFlags: 0
@@ -19100,6 +19168,7 @@ GameObject:
   - component: {fileID: 1288177810}
   - component: {fileID: 1288177809}
   - component: {fileID: 1288177808}
+  - component: {fileID: 1288177812}
   m_Layer: 0
   m_Name: Sign_Run_Jump
   m_TagString: Untagged
@@ -19417,6 +19486,22 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &1288177812
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1288177806}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 20b0fd3c8f8c9e0498f228c981494658, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SignText
+  text: "Shift  \u0E27\u0E34\u0E48\u0E07\nSpace  \u0E01\u0E23\u0E30\u0E42\u0E14\u0E14"
+  fontSize: 150
+  color: {r: 0.95, g: 0.92, b: 0.8, a: 1}
+  offset: 0.03
 --- !u!1 &1298389191
 GameObject:
   m_ObjectHideFlags: 0
